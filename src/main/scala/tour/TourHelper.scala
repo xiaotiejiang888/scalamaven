@@ -27,7 +27,7 @@ import com.mongodb.spark.config.WriteConfig
 private[tour] trait TourHelper {
 
   def getSparkContext(args: Array[String]): SparkContext = {
-    val uri: String = args.headOption.getOrElse("mongodb://mpush:talkingdata@172.23.6.82/mpush")
+    val uri: String = args.headOption.getOrElse("mongodb://mpush:talkingdata@172.23.6.82:27017/mpush.myCollection")
     val conf = new SparkConf()
       .setMaster("spark://172.23.5.113:7077")
       .setAppName("MongoSparkConnectorTour")
